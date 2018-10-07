@@ -7,6 +7,5 @@ pageDesign:
 ratio:
   loss: '5'
   win: '6'
-permalink: teams/rocketleague1v1
 ---
 We currently do not have any history.

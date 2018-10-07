@@ -7,6 +7,5 @@ pageDesign:
 ratio:
   loss: '5'
   win: '10'
-permalink: teams/overwatch
 ---
 We currently do not have information

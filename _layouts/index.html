@@ -54,7 +54,7 @@
 
 {% for team in site.teams %}
 
-<a class="team" href="../{{ team.permalink }}" style="background-image: url({{ team.pageDesign.bgImage }}); background-size: cover; background-position: center">
+<a class="team" href="{{ team.url }}" style="background-image: url({{ team.pageDesign.bgImage }}); background-size: cover; background-position: center">
 
     <h1>{{ team.game }}</h1>
 

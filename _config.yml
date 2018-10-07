@@ -11,6 +11,7 @@ collections:
     output: false
   teams:
     output: true
+    permalink: /:collection/:name
   partners:
     output: false
   players:

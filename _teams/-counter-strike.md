@@ -7,6 +7,5 @@ pageDesign:
 ratio:
   loss: '3'
   win: '8'
-permalink: teams/csgo
 ---
 We currently do not have any history.

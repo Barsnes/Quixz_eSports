@@ -7,6 +7,5 @@ pageDesign:
 ratio:
   loss: '12'
   win: '31'
-permalink: teams/hearthstone
 ---
 We currently do not have any info
