@@ -7,7 +7,7 @@ description: Currently Quixz eSports is hosting a full roster in CSGO, 1v1 Rocke
 
 {% for team in site.teams %}
 
-<a class="team" href="../{{ team.permalink }}" style="background-image: url({{ team.pageDesign.bgImage }}); background-size: cover; background-position: center">
+<a class="team" href="{{ team.url }}" style="background-image: url({{ team.pageDesign.bgImage }}); background-size: cover; background-position: center">
 
     <h1>{{ team.game }}</h1>
 
