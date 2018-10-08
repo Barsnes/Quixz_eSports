@@ -104,7 +104,7 @@
     {% assign printedEvents = 0 %}
     {% assign sorted = site.matches | sort: 'matchdate' %}
 
-    {% for item in sorted %}
+    {% for item in sorted reversed %}
       {% assign curDate = site.time | date: '%Y-%m-%d' %}
       {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
       {% if postStartDate <= curDate and printedEvents < eventsNumber %}
