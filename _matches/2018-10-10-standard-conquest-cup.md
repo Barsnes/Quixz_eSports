@@ -7,7 +7,7 @@ matchlink: >-
   https://eu.glory4gamers.com/en/tournament/standard-conquest-cup-2-en-98505/infos
 image: /assets/image/articles/hearthstone-logo.png
 score:
-  opponentScore: '2'
-  quixzScore: '0'
+  opponentScore: ''
+  quixzScore: 16th
 ---
 
