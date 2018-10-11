@@ -64,7 +64,7 @@
     {% for item in sorted reversed %}
       {% assign curDate = site.time | date: '%Y-%m-%d' %}
       {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-      {% if postStartDate <= curDate and printedEvents < eventsNumber and item.game == page.game %}
+      {% if postStartDate < curDate and printedEvents < eventsNumber and item.game == page.game %}
           {% assign printedEvents = printedEvents | plus: 1 %}
       <div class="match_body">
           <h1>{{ item.matchdate | date: '%B %d, %Y' }}</h1>
