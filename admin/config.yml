@@ -61,6 +61,8 @@ collections:
     label: "Tournaments"
     slug: "{{tournament}}-{{year}}-{{month}}-{{day}}-{{slug}}"
     folder: "_tournaments"
+    delete: true
+    create: true
     fields:
           - {label: "Tournament name", name: "title", widget: "string"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "tournament"}
