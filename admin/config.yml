@@ -77,13 +77,12 @@ collections:
             name: "matches"
             widget: "list"
             fields:
-              - {label: "Match", name: "title", widget: "string", default:""}
-              - {label: "Date", name: "matchdate", widget: "date", format: "YYYY-MM-DD"}
-              - {label: "Game", name: "game", widget: "select", options: ["Counter Strike", "Rocket League 1v1", "Rocket League 3v3", "League of Legends", "Hearthstone", "Overwatch"]}
+              - {label: "Date", name: "matchDate", widget: "date", format: "YYYY-MM-DD"}
+              - {label: "Game", name: "matchGame", widget: "select", options: ["Counter Strike", "Rocket League 1v1", "Rocket League 3v3", "League of Legends", "Hearthstone", "Overwatch"]}
               - {label: "Match Type", name: "matchType", widget: "hidden", default: "Match"}
               - {label: "Link", name: "matchlink", widget: "string", required: false}
               - label: "Team logo"
-                name: "image"
+                name: "matchImage"
                 widget: "image"
                 defualt: "default_team_logo.png"
               - label: "Score"
