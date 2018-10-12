@@ -68,9 +68,6 @@ collections:
           - {label: "Game", name: "game", widget: "select", options: ["Counter Strike", "Rocket League 1v1", "Rocket League 3v3", "League of Legends", "Hearthstone", "Overwatch"]}
           - {label: "Match Type", name: "matchType", widget: "hidden", default: "Tournament"}
           - {label: "Link", name: "matchlink", widget: "string", required: false}
-          - label: "Tournament Logo"
-            name: "image"
-            widget: "image"
           - {label: "Placement, name: "placement", widget: "select", options: ["32-17th", "16-9th", "8-5th", "4-3rd", "2nd", "1st", "Not finished"]}
           - label: "Matches"
             name: "matches"
