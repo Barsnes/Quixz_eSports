@@ -59,7 +59,7 @@ collections:
 
   - name: "tournaments"
     label: "Tournaments"
-    slug: "{{tournament}}-{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     folder: "_tournaments"
     delete: true
     create: true
@@ -69,7 +69,9 @@ collections:
           - {label: "Date", name: "matchdate", widget: "date", format: "YYYY-MM-DD"}
           - {label: "Game", name: "game", widget: "select", options: ["Counter Strike", "Rocket League 1v1", "Rocket League 3v3", "League of Legends", "Hearthstone", "Overwatch"]}
           - {label: "Match Type", name: "matchType", widget: "hidden", default: "Tournament"}
+          - {label: "Format", name: "format", widget: "select", options: ["Best of 1", "Best of 3", "Best of 5"]}
           - {label: "Link", name: "matchlink", widget: "string", required: false}
+          - {label: "Twitch Stream", name: "media", widget: "string", required: false, hint: "Use the channelname at the end of Twitch link"}
           - label: "Tournament Logo"
             name: "image"
             widget: "image"
