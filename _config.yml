@@ -19,6 +19,8 @@ collections:
   tournaments:
     output: true
     permalink: /:collection/:year/:month/:title
+  management:
+    output: true
 
 title: Quixz eSports
 email: contact@quixz.eu

@@ -207,3 +207,42 @@ collections:
       - {label: "Active", name: "status", widget: "select", options: ["true", "false"]}
       - {label: "Website", name: "website", widget: "string"}
       - {label: "Logo", name: "image", widget: "image"}
+
+  - name: "management"
+    label: "Management"
+    delete: false
+    create: false
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}-{{slug}}"
+    folder: "_players"
+    fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "players"}
+          - {label: "Name", name: "title", widget: "string"}
+          - {label: "Active", name: "status", widget: "select", options: ["true", "false"]}
+          - label: "Name"
+            name: "name"
+            widget: "object"
+            fields:
+              - {label: "First Name", name: "firstname", widget: "string"}
+              - {label: "Last name", name: "lastname", widget: "string"}
+          - label: "Photo"
+            name: "playerimage"
+            widget: "image"
+            defualt: "/assets/image/articles/avatar.png"
+          - {label: "Game", name: "playergame", widget: "hidden", default: "management"}
+          - {label: "Text", name: "body", widget: "markdown", tagname: "p", required: false}
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            field: {label: "Gallery Image", name: "galleryImage", widget: image}
+          - label: "Social Media"
+            name: "sm"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+              - {label: "Twitch", name: "twitch", widget: "string", required: false}
+              - {label: "Youtube", name: "youtube", widget: "string", required: false}
+              - {label: "Steam", name: "steam", widget: "string", required: false}
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - {label: "categories", name: "categories", widget: "hidden", default: "player"}
+          - {label: "permalink", name: "permalink", widget: "hidden", default: "permalink: /player/:slug"}
