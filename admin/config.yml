@@ -213,7 +213,7 @@ collections:
     delete: false
     create: false
     slug: "{{year}}-{{month}}-{{day}}-{{title}}-{{slug}}"
-    folder: "_players"
+    folder: "_management"
     fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "players"}
           - {label: "Name", name: "title", widget: "string"}
