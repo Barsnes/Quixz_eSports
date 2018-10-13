@@ -1,9 +1,9 @@
 <div class="footer">
   <ul>
     <li>Copyright © {{ 'now' | date: "%Y" }} Quixz eSports All Rights Reserved.</li>
-    <li style="color:#F8B52A;">contact@quixz.eu</li>
+    <li style="color:#F8B52A;">{{ site.email }}</li>
   </ul>
-  <img class="footer_logo" src="{{ baseurl }}/assets/image/logo/logo_500.png" alt="Quixz eSports logo">
+  <img class="footer_logo" src="{{ baseurl }}{{ site.logo }}" alt="Quixz eSports logo">
 
 </div>
 <div class="footer__partner">

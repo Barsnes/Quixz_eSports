@@ -11,24 +11,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
   <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="Quixz eSports - {{ page.title }}">
+  <meta itemprop="name" content="{{ site.title }} - {{ page.title }}">
   <meta itemprop="description" content="{{ page.description }}">
   <meta itemprop="image" content="https://quixz.eu{{ page.image }}">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://quixz.eu">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Quixz eSports - {{ page.title }}">
+  <meta property="og:title" content="{{ site.title }} - {{ page.title }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="https://quixz.eu{{ page.image }}">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quixz eSports - {{ page.title }}">
+  <meta name="twitter:title" content="{{ site.title }} - {{ page.title }}">
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="https://quixz.eu{{ page.image }}">
 
-  <title>Quixz eSports - {{ page.title }}</title>
+  <title>{{ site.title }} - {{ page.title }}</title>
   <link REL="SHORTCUT ICON" HREF="{{ baseurl }}/assets/image/logo/logo_500.png">
   <meta name="google-site-verification" content="x7yK7kt6bcjL-iz3Vw9X0BDJlCR8mjrBVt_rDVekI04" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 <div class="header">
-    <a href="{{ baseurl }}/index"><img src="{{ baseurl }}/assets/image/logo/logo_500.png" alt="Quixz eSports logo"></a>
+    <a href="{{ baseurl }}/index"><img src="{{ baseurl }}{{ site.logo }}" alt="Quixz eSports logo"></a>
     <nav>
       <div class="toggle">
         <i class="fas fa-bars menu" aria-hidden="true"></i>
