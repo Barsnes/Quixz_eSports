@@ -121,14 +121,39 @@
   <h2>Upcoming</h2>
 
   {% assign eventPost = site.tournaments | sort: 'date' %}
-  {% assign eventsNumber = 3 %}
+  {% assign eventsNumber = 4 %}
   {% assign printedEvents = 0 %}
   {% assign sorted = site.tournaments | sort: 'matchdate' %}
 
-  {% for item in sorted reversed %}
+  {% for item in sorted %}
     {% assign curDate = site.time | date: '%Y-%m-%d' %}
     {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
     {% if postStartDate >= curDate and printedEvents < eventsNumber %}
+        {% assign printedEvents = printedEvents | plus: 1 %}
+    <div class="tournamentBody">
+      <h1>{{ item.title }}</h1>
+        <h2>{{ item.matchdate | date: '%B %d, %Y' }}</h2>
+          <div style="margin: auto">
+            <h3>{{ item.game }}</h3>
+            <a href="{{ item.url }}" style="color: #F8B52A; text-decoration: none"><h3 class="matchButton" style="width: 40%; margin: auto">{{ item.matchType }}</h3></a>
+          </div>
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
+
+<div class="upcomingTournaments">
+  <h2>Past</h2>
+
+  {% assign eventPost = site.tournaments | sort: 'date' %}
+  {% assign eventsNumber = 4 %}
+  {% assign printedEvents = 0 %}
+  {% assign sorted = site.tournaments | sort: 'matchdate' %}
+
+  {% for item in sorted %}
+    {% assign curDate = site.time | date: '%Y-%m-%d' %}
+    {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
+    {% if postStartDate < curDate and printedEvents < eventsNumber %}
         {% assign printedEvents = printedEvents | plus: 1 %}
     <div class="tournamentBody">
       <h1>{{ item.title }}</h1>
@@ -150,7 +175,7 @@
 
 .tournamentBody {
   text-align: center;
-  width: 100%;
+  width: calc(100% - 1rem);
   background-color: #2B63AF;
   margin: auto;
   padding: .5rem;
@@ -171,7 +196,7 @@
 }
 
 .upcomingTournaments {
-  background-color: #232323;
+  background-color: #F8B52A;
   display: grid;
   padding: 1rem 15%;
   grid-template-columns: 1fr 1fr;
