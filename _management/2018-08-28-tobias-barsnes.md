@@ -1,15 +1,14 @@
 ---
-title: Tobias Barsnes
 layout: players
+title: Tobias Barsnes
 status: 'true'
 name:
   firstname: Tobias
   lastname: Barsnes
-playerimage: /assets/image/articles/Avatar.png
+playerimage: /assets/image/articles/tobias-cut.png
 playergame: Management
-twitter: 'https://twitter.com/Barsnes_'
-twitch: '#'
-youtube: 'https://www.youtube.com/channel/UCVyK8uQ0RfTn7xHwbHAJvIA'
-steam: 'https://steamcommunity.com/id/Torsken_'
+gallery:
+  - null
 permalink: management/tobias-barsnes
 ---
+Tobias Barsnes is the founder of Quixz eSports.
