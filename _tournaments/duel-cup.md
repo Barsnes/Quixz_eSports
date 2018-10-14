@@ -15,11 +15,12 @@ matches:
       opponentScore: '0'
       quixzScore: '1'
   - matchDate: '2018-10-14'
-    matchImage: /assets/image/articles/Avatar.png
+    matchImage: ''
     score:
       opponentScore: '0'
       quixzScore: '1'
   - matchDate: '2018-10-14'
+    matchImage: /assets/image/articles/Avatar.png
     score:
       opponentScore: '1'
       quixzScore: '0'
