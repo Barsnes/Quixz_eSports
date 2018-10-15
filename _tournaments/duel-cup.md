@@ -25,4 +25,3 @@ matches:
       opponentScore: '1'
       quixzScore: '0'
 ---
-

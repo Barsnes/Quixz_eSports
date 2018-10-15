@@ -64,7 +64,7 @@
   {% for item in sorted %}
     {% assign curDate = site.time | date: '%Y-%m-%d' %}
     {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-    {% if postStartDate >= curDate and printedEvents < eventsNumber %}
+    {% if printedEvents < eventsNumber and item.placement == "Not Finished" %}
         {% assign printedEvents = printedEvents | plus: 1 %}
 
       <div class="match_body">
@@ -95,7 +95,7 @@
     {% for item in sorted reversed %}
       {% assign curDate = site.time | date: '%Y-%m-%d' %}
       {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-      {% if postStartDate < curDate and printedEvents < eventsNumber %}
+      {% if printedEvents < eventsNumber and item.placement != "Not Finished" %}
           {% assign printedEvents = printedEvents | plus: 1 %}
       <div class="match_body">
           <h1>{{ item.matchdate | date: '%B %d, %Y' }}</h1>
@@ -128,7 +128,7 @@
   {% for item in sorted %}
     {% assign curDate = site.time | date: '%Y-%m-%d' %}
     {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-    {% if postStartDate >= curDate and printedEvents < eventsNumber %}
+    {% if printedEvents < eventsNumber and item.placement == "Not Finished" %}
         {% assign printedEvents = printedEvents | plus: 1 %}
     <div class="tournamentBody">
       <h1>{{ item.title }}</h1>
@@ -138,23 +138,22 @@
             <a href="{{ item.url }}" style="color: #F8B52A; text-decoration: none"><h3 class="matchButton" style="width: 40%; margin: auto">{{ item.matchType }}</h3></a>
           </div>
     </div>
+
   {% endif %}
 {% endfor %}
-</div>
 
-<div class="upcomingTournaments">
-  <h2>Past</h2>
+<h2>Past</h2>
 
-  {% assign eventPost = site.tournaments | sort: 'date' %}
-  {% assign eventsNumber = 4 %}
-  {% assign printedEvents = 0 %}
-  {% assign sorted = site.tournaments | sort: 'matchdate' %}
+{% assign eventPost = site.tournaments | sort: 'date' %}
+{% assign eventsNumber = 4 %}
+{% assign printedEvents = 0 %}
+{% assign sorted = site.tournaments | sort: 'matchdate' %}
 
-  {% for item in sorted %}
-    {% assign curDate = site.time | date: '%Y-%m-%d' %}
-    {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-    {% if postStartDate < curDate and printedEvents < eventsNumber %}
-        {% assign printedEvents = printedEvents | plus: 1 %}
+{% for item in sorted %}
+  {% assign curDate = site.time | date: '%Y-%m-%d' %}
+  {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
+  {% if printedEvents < eventsNumber and item.placement != "Not Finished" %}
+      {% assign printedEvents = printedEvents | plus: 1 %}
     <div class="tournamentBody">
       <h1>{{ item.title }}</h1>
         <h2>{{ item.matchdate | date: '%B %d, %Y' }}</h2>
@@ -163,10 +162,9 @@
             <a href="{{ item.url }}" style="color: #F8B52A; text-decoration: none"><h3 class="matchButton" style="width: 40%; margin: auto">{{ item.matchType }}</h3></a>
           </div>
     </div>
-  {% endif %}
-{% endfor %}
-</div>
 
+{% endif %}
+{% endfor %}
 </div>
 
 {% include footer.html %}
