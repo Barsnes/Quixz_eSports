@@ -128,7 +128,7 @@
   {% for item in sorted %}
     {% assign curDate = site.time | date: '%Y-%m-%d' %}
     {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-    {% if printedEvents < eventsNumber and item.placement == "Not Finished" %}
+    {% if printedEvents < eventsNumber and item.placement == "Not finished" %}
         {% assign printedEvents = printedEvents | plus: 1 %}
     <div class="tournamentBody">
       <h1>{{ item.title }}</h1>
@@ -145,14 +145,14 @@
 <h2>Past</h2>
 
 {% assign eventPost = site.tournaments | sort: 'date' %}
-{% assign eventsNumber = 4 %}
+{% assign eventsNumber = 2 %}
 {% assign printedEvents = 0 %}
 {% assign sorted = site.tournaments | sort: 'matchdate' %}
 
 {% for item in sorted %}
   {% assign curDate = site.time | date: '%Y-%m-%d' %}
   {% assign postStartDate = item.matchdate | date: '%Y-%m-%d' %}
-  {% if printedEvents < eventsNumber and item.placement != "Not Finished" %}
+  {% if printedEvents < eventsNumber and item.placement != "Not finished" %}
       {% assign printedEvents = printedEvents | plus: 1 %}
     <div class="tournamentBody">
       <h1>{{ item.title }}</h1>
