@@ -80,6 +80,10 @@
           <img src="{{ item.image }}" alt="Logo of opposing team"></img>
       </div>
 
+      {% elsif printedEvents == 0 %}
+        {% assign printedEvents = printedEvents | plus: 1 %}
+      <h2>No matches to display</h2>
+
   {% endif %}
 {% endfor %}
   </div>
@@ -109,6 +113,7 @@
             <h2>{{ item.score.opponentScore }}</h2>
           <img src="{{ item.image }}" alt="Logo of opposing team"></img>
       </div>
+
     {% endif %}
   {% endfor %}
   </div>
@@ -138,6 +143,10 @@
             <a href="{{ item.url }}" style="color: #F8B52A; text-decoration: none"><h3 class="matchButton" style="width: 40%; margin: auto">{{ item.matchType }}</h3></a>
           </div>
     </div>
+
+    {% elsif printedEvents == 0 %}
+      {% assign printedEvents = printedEvents | plus: 1 %}
+            <h3>No tournaments to display</h3>
 
   {% endif %}
 {% endfor %}
