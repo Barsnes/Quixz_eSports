@@ -8,7 +8,7 @@ matchlink: >-
 placement: Finished
 image: /assets/image/articles/hearthstone-logo.png
 score:
-  opponentScore: ' '
+  opponentScore: ''
   quixzScore: 16th
 ---
 
