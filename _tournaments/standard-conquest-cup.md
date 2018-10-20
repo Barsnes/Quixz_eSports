@@ -11,5 +11,6 @@ image: /assets/image/articles/hs-bilde.jpeg
 placement: Not finished
 matches:
   - matchDate: '2018-10-20'
+    matchImage: /assets/image/articles/default_team_logo.png
 ---
 
