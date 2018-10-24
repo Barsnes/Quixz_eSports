@@ -16,4 +16,3 @@ matches:
       opponentScore: '2'
       quixzScore: '1'
 ---
-

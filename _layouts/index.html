@@ -144,10 +144,11 @@
           </div>
     </div>
 
-    {% elsif printedEvents == 0 %}
+    {% if printedEvents == 0 %}
       {% assign printedEvents = printedEvents | plus: 1 %}
             <h3>No tournaments to display</h3>
 
+  {% endif %}
   {% endif %}
 {% endfor %}
 
