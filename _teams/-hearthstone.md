@@ -5,7 +5,7 @@ game: Hearthstone
 pageDesign:
   bgImage: /assets/image/articles/hearthstonebg.png
 ratio:
-  loss: '35'
-  win: '73'
+  loss: '36'
+  win: '80'
 ---
 We currently do not have any info
