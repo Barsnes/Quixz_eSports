@@ -11,5 +11,8 @@ placement: Not finished
 matches:
   - matchDate: '2018-10-28'
     matchImage: /assets/image/articles/default_team_logo.png
+    score:
+      opponentScore: '0'
+      quixzScore: '1'
 ---
 
